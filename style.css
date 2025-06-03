@@ -1,0 +1,177 @@
+/* https://gwfh.mranftl.com/fonts */
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype'); 
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetype'); 
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype'); 
+}
+
+
+:root {
+    /* COLORS */
+    --grey-900: hsl(0, 0%, 8%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-700: hsl(0, 0%, 20%);
+    --white: hsl(0, 0%, 100%);
+    --green: hsl(75, 94%, 57%);
+    /* SPACING */
+    --space-xxl: 40px;
+    --space-xl: 24px;
+    --space-l: 16px;
+    --space-m: 12px;
+    --space-s: 8px;
+    --space-xs: 4px;
+    /* FONTS */
+    --text-1-size: 1.5rem; /* 24px */
+    --text-1-line-height: 1.5;
+    --text-1-letter-spacing: 0;
+    --text-1-font-weight: 600;
+
+    --text-2-size: 0.875rem; /* 14px */
+    --text-2-line-height: 1.5;
+    --text-2-letter-spacing: 0;
+    --text-2-font-weight: 400;
+
+    --text-3-size: 0.875rem; /* 14px */
+    --text-3-line-height: 1.5;
+    --text-3-letter-spacing: 0;
+    --text-3-font-weight: 700;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  /* font-family: 'Inter'; */
+  font-family: 'Inter', sans-serif, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--grey-900);
+
+}
+h1,
+h2,
+h3,
+p,
+img
+{
+  margin: 0;
+  /* display: block; */
+}
+
+.card{
+    width: 384px;
+    height: 611px;
+    background-color: lightseagreen;
+    background-color: var(--grey-800);
+    border-radius: 12px;
+    padding: var(--space-xxl);
+    margin: 0;
+    text-align: center;
+}
+.card img{
+    border-radius: 50%;
+    margin: 0 auto;
+    margin: 0 auto var(--space-xl) auto;
+    display: block;
+}
+
+.card .name{
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    letter-spacing: var(--text-1-letter-spacing);
+    font-weight: var(--text-1-font-weight);
+    color: var(--white);
+    margin: 0 0 var(--space-xs) 0;   
+}
+.card .location{
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    letter-spacing: var(--text-3-letter-spacing);
+    font-weight: var(--text-3-font-weight);
+    color: var(--green); 
+    margin: 0 0 var(--space-xl) 0;  
+}
+.card .role{
+    font-size: var(--text-2-size);
+    line-height: var(--text-2-line-height);
+    letter-spacing: var(--text-2-letter-spacing);
+    font-weight: var(--text-2-font-weight);
+    color: var(--white);
+    margin: 0 0 var(--space-xl) 0;     
+}
+
+.card button {
+    /* display: block; */
+    width: 100%;
+    padding: 0;
+    background-color: var(--grey-700);
+    /* padding-block: var(--space-m); */
+    height: 45px;
+    font-family: 'Inter', sans-serif, Helvetica, sans-serif;
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    letter-spacing: var(--text-3-letter-spacing);
+    font-weight: var(--text-3-font-weight);
+    color: var(--white);
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.card button:hover{
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--grey-700);
+
+}
+.card button:not(:last-child){
+    margin: 0 0 var(--space-l) 0;
+}
+
+
+
+/* TABLET */
+@media (min-width: 401px) and (max-width: 768px){
+    /* body{
+        background-color: orange;   
+    }     */
+}
+
+/* MOBILE */
+@media (max-width: 400px){
+    /* body{
+        background-color: red;   
+    } */
+    .card{
+        width: 327px;
+        height: 579px;
+        padding: var(--space-xl);
+    }    
+}
+
+
+
+
